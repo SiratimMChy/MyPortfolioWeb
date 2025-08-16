@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "dependencies": {
+    "cloudinary": "^2.7.0",
+    "express": "^5.1.0",
+    "firebase": "^12.1.0",
+    "firebase-admin": "^13.4.0",
+    "multer": "^2.0.2"
+  },
+  "name": "protfolio",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiratimMChy/MyPortfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiratimMChy/MyPortfolio/issues"
+  },
+  "homepage": "https://github.com/SiratimMChy/MyPortfolio#readme",
+  "description": ""
+}
