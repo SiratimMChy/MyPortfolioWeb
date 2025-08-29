@@ -12,11 +12,11 @@ function createModernToggle(button) {
   container.className = 'w-14 h-7 flex items-center rounded-full p-1 bg-gray-300 dark:bg-gray-700 relative cursor-pointer transition-colors duration-300';
 
   const sun = document.createElement('span');
-  sun.className = 'absolute left-2 text-yellow-500 text-sm';
+  sun.className = 'absolute left-2 text-yellow-500 text-sm select-none';
   sun.textContent = '🔅';
 
   const moon = document.createElement('span');
-  moon.className = 'absolute right-2 text-gray-200 text-sm';
+  moon.className = 'absolute right-2 text-gray-200 text-sm select-none';
   moon.textContent = '🌒';
 
   const dot = document.createElement('div');
@@ -41,10 +41,15 @@ function createModernToggle(button) {
 createModernToggle(themeToggle);
 createModernToggle(themeToggleMobile);
 
-
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
 menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
+  if (mobileMenu.classList.contains('hidden')) {
+    mobileMenu.classList.remove('hidden');
+    mobileMenu.classList.add('flex');
+  } else {
+    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('flex');
+  }
 });
