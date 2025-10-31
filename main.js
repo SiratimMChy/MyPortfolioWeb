@@ -72,7 +72,7 @@ function createRecCard(rec) {
   card.className = "bg-white dark:bg-slate-700 rounded-xl shadow p-6 w-full max-w-md mx-auto"; 
  
   card.innerHTML = `
-    <p class="text-gray-800 dark:text-gray-100 italic mb-4 text-base md:text-lg break-words">
+    <p class="text-gray-800 dark:text-gray-100 italic mb-4 text-base md:text-lg wrap-break-word">
       "${rec.message}"
     </p>
     <div class="flex items-center mt-4">
@@ -96,16 +96,14 @@ function createRecCard(rec) {
 
 if (recPreviewList) {
   listenRecommendations((recommendations) => {
-    console.log("Recommendations fetched:", recommendations); // Debugging
+    console.log("Recommendations fetched:", recommendations);
 
     recPreviewList.innerHTML = "";
 
     if (!recommendations || recommendations.length === 0) {
-      recPreviewList.innerHTML = `<p class="text-center text-gray-500 dark:text-gray-400">No recommendations yet.</p>`;
+      recPreviewList.innerHTML = `<p class="text-center items-center text-gray-500 dark:text-gray-400">No recommendations yet.</p>`;
       return;
     }
-
-    // Detect page: show first 3 on index.html, all on recommendation.html
     const isIndex = document.body.contains(document.querySelector("section#recommendationsPreview"));
     const toShow = isIndex ? recommendations.slice(0, 3) : recommendations;
 

@@ -1,0 +1,35 @@
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero > * {
+  animation: slideInLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.hero img {
+  animation-delay: 0.1s;
+}
+
+.hero h2 {
+  animation-delay: 0.3s;
+}
+
+.hero p {
+  animation-delay: 0.5s;
+}
+
+.hero a {
+  animation-delay: 0.7s;
+}
+
+.hero {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
